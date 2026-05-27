@@ -107,7 +107,7 @@ if 'historico_caos' not in st.session_state: st.session_state.historico_caos = [
 
 
 # --- BARRA LATERAL (MENU ESQUERDO) ---
-st.sidebar.header("⚙️ Painel Híbrido")
+st.sidebar.header("Painel de configuração")
 
 modo = st.sidebar.radio(
     "Como ler a mensagem?", 
@@ -116,7 +116,7 @@ modo = st.sidebar.radio(
 )
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("🔒 Tranca RSA da Semente")
+st.sidebar.subheader("Tranca RSA da Semente")
 
 seed_input = st.sidebar.number_input(
     "Semente Caótica (X₀):", 
@@ -135,7 +135,7 @@ if st.session_state.original_seed is not None:
 
 
 # --- ÁREA PRINCIPAL DO SIMULADOR ---
-st.title("🛡️ Sistema de Criptografia Híbrida")
+st.title("Sistema de Criptografia Híbrida")
 
 tab_principal, tab_caos, tab_rsa = st.tabs(["🚀 Terminal Principal", "🔬 Análise Matemática do Caos", "🧮 Laboratório do RSA"])
 
